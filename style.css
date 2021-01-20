@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+.header{
+    width: 100%;
+    background-image: linear-gradient(to bottom right,#947573,#ae9193);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top:200px;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    margin: 0;
+    width: 100%;
+}
+.logo{
+    display: inline-block;
+    justify-content: center;
+}
+.logo img{
+    width: 200px;
+}
+nav{
+    flex: 1;
+    text-align: center;
+}
+nav ul{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    margin: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black
+}
+.account{
+    display: flex;
+    justify-content: space-around;
+}
+.btn{
+    display: inline-block;
+    background-color: #f5d069;
+    padding: 8px 30px;
+    margin: 30px 0px;
+}
+.btn-login{
+    background-color: transparent;
+}
+
+.btn:hover{
+    background-color: #ad944d;
+    color: white;
+    box-shadow: 0 0 0 0.2rem #f5d271;
+}
+.btn.focus, .btn:focus{
+    box-shadow: 0 0 0 0.2rem #f5d271;
+}
+.btn-login:hover{
+    background-color: rgba(0, 0, 0, 0.425);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.col-6 img{
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+.ideas{
+    padding: 80px 40px;
+    position: relative;
+}
+.ideas::before{
+    position:absolute;
+    width: 80px;
+    height: 80px;
+    content: "";
+    background: url(./image/br_logo_small.jpg) no-repeat center center;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top:-40px;
+    margin: auto;
+}
+.started-anim-white,.started-anim{
+    position: relative;
+}
+.started-anim-white::after, .started-anim::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left:0;
+    bottom: -1px;
+    background-color: black;
+    transform: scale(1);
+    transition: transform .5s;
+    transition-timing-function: cubic-bezier(0.694, 0, 0.335, 1), cubic-bezier(0.694, 0, 0.335, 1);
+    transform-origin: left center;
+}
+.started-anim-white::after{
+    background-color: white;
+}
+.started-anim-white:hover::after ,.started-anim:hover::after{
+    transform: scale(0);
+    transform-origin: right center;
+}
+.slide-anim{
+    position: relative;
+    transition: all 0;
+    transition-timing-function: cubic-bezier(0.694, 0, 0.335, 1), cubic-bezier(0.694, 0, 0.335, 1);
+    transform-origin: left center;
+}
+.started-anim:hover .slide-anim, .started-anim-white:hover .slide-anim{
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.video-div{
+    width: 100%;
+}
+video{
+    width: 100%;
+    height: 100%;
+}
+.high-level-style{
+    margin-bottom: 24px;
+}
+.high-level-style-2{
+    margin-bottom: 5px;
+}
+aside{
+    position: relative;
+    display: inline-block;
+}
+.carousel-element{
+    position: relative;
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.123);
+}
+.carousel-element:hover{
+    color: black;
+}
+.carousel-element:hover::after{
+    transform: scale(1);
+    transform-origin: left center;
+}
+.carousel-element::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left:0;
+    bottom: -1px;
+    background-color: black;
+    transform: scale(0);
+    transition: transform .5s;
+    transition-timing-function: cubic-bezier(0.694, 0, 0.335, 1), cubic-bezier(0.694, 0, 0.335, 1);
+    transform-origin: right center;
+}
+.carousel-element-trigged{
+    color: black;
+}
+
+.carousel-element-trigged::after{
+    transform: scale(1);
+    transform-origin: left   center;
+}
+.carousel{
+    background-color: #f0f0f0;
+    padding-bottom: 30px;
+}
+.carousel-div{
+    margin-bottom: 3px;
+}
+.carousel-show, .slide-show{
+    width: 100%;
+    display: none;
+    transition: show 0.3s;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-show img{
+    width: 100%;
+    animation: zoom_out 1s 1;
+}
+
+.carousel-2{
+    background-color: #686261;
+}
+.slide-imgs{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.slide-imgs img{
+    width: 70%;
+}
+.center-div{
+    margin: 0 auto;
+}
+.pointers{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 30px;
+}
+.cover{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #534e4e;
+}
+.pointer-btn{
+    padding: 8px 16px;
+    cursor: pointer;
+    width: 200px;
+    color: white;
+}
+.slide-transform{
+    position: absolute;
+    padding: 8px 16px;
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+.slide-transform p{
+    cursor: pointer;
+    margin: 0;
+}
+@keyframes zoom_out{
+    0%{
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes overlay {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
