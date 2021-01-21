@@ -52,7 +52,10 @@ async function carousel_Hover(){
 }
 
 //slide
-function change_Transform(name,position){
+async function change_Transform(name,position,index){
     document.getElementById("change-name").innerText=name;
     document.getElementById("change-div").style.transform=position;
+    let elements=await document.getElementsByClassName("slide-show");
+    for (let i = 0; i < elements.length; i++) elements[i].style.display="none";
+    elements[index].style.display="block";
 }
